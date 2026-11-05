@@ -1,0 +1,25 @@
+{
+  "name": "cadastro-socioeconomico",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:opcoes": "node scripts/importar-opcoes.js",
+    "db:seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "next": "16.4.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^9",
+    "eslint-config-next": "16.4.5",
+    "read-excel-file": "^9.3.13"
+  },
+  "type": "module"
+}

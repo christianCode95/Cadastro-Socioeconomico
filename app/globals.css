@@ -1,0 +1,301 @@
+:root {
+  --azul-escuro: #1a3a5c;
+  --azul: #2563eb;
+  --azul-claro: #dbeafe;
+  --cinza: #64748b;
+  --borda: #e2e8f0;
+  --fundo: #f8fafc;
+  --vermelho: #dc2626;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Calibri, Arial, sans-serif;
+  color: #1e293b;
+  background: var(--fundo);
+  line-height: 1.5;
+}
+ 
+a {
+  color: var(--azul);
+}
+ 
+/* ---------- Cabeçalho e rodapé ---------- */
+.topo {
+  background: var(--azul-escuro);
+  color: #fff;
+}
+.topo .conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 14px 16px;
+}
+.marca {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+}
+.topo nav {
+  display: flex;
+  gap: 18px;
+}
+.topo nav a {
+  color: var(--azul-claro);
+  text-decoration: none;
+}
+.topo nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.rodape {
+  color: var(--cinza);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 24px 16px;
+}
+ 
+.conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+ 
+h1 {
+  color: var(--azul-escuro);
+  margin: 0 0 4px;
+}
+h2 {
+  color: var(--azul-escuro);
+  font-size: 1.15rem;
+  margin: 0 0 12px;
+}
+.subtitulo {
+  color: var(--cinza);
+  margin: 0 0 20px;
+}
+ 
+/* ---------- Cartões e grades ---------- */
+.cartao {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.bloco {
+  margin: 0 0 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--azul);
+  font-weight: 600;
+}
+.indicadores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.indicador .numero {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--azul-escuro);
+}
+.indicador .legenda {
+  color: var(--cinza);
+}
+.duas-colunas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+}
+ 
+/* ---------- Tabelas ---------- */
+.tabela-rolagem {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--borda);
+  vertical-align: top;
+}
+th {
+  background: var(--azul-claro);
+  color: var(--azul-escuro);
+  font-weight: 600;
+}
+tbody tr:hover {
+  background: #f1f5f9;
+}
+.vazio {
+  color: var(--cinza);
+  font-style: italic;
+}
+ 
+/* Barra horizontal simples para os gráficos do painel */
+.barra {
+  height: 10px;
+  background: var(--azul);
+  border-radius: 5px;
+  min-width: 4px;
+}
+ 
+/* ---------- Lista de dados (detalhe) ---------- */
+.dados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px 24px;
+  margin: 0;
+}
+.dados dt {
+  font-size: 0.85rem;
+  color: var(--cinza);
+}
+.dados dd {
+  margin: 0;
+  font-weight: 500;
+}
+ 
+/* ---------- Botões ---------- */
+.botao {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--azul);
+  background: var(--azul);
+  color: #fff;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+.botao:hover {
+  filter: brightness(1.1);
+}
+.botao:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.botao.secundario {
+  background: #fff;
+  color: var(--azul);
+}
+.botao.perigo {
+  background: #fff;
+  color: var(--vermelho);
+  border-color: var(--vermelho);
+}
+.botao.pequeno {
+  padding: 4px 10px;
+  font-size: 0.85rem;
+}
+.acoes {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.cabecalho-pagina {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+ 
+/* ---------- Formulários ---------- */
+.busca {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.busca input {
+  flex: 1;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+  background: #fff;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--azul-claro);
+  border-color: var(--azul);
+}
+input[type="checkbox"] {
+  width: auto;
+}
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 16px;
+}
+.grade label,
+.campo-multiplo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #334155;
+}
+.opcoes-multiplas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+}
+.opcoes-multiplas label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+.linha-repeticao {
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  padding: 12px 16px 16px;
+  margin: 0 0 12px;
+}
+.linha-repeticao legend {
+  font-weight: 600;
+  color: var(--azul-escuro);
+  padding: 0 6px;
+}
+.linha-repeticao .botao {
+  margin-top: 12px;
+}
+.erro {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: var(--vermelho);
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.barra-salvar {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid var(--borda);
+  padding: 12px 0;
+}
